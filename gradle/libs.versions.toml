@@ -1,4 +1,6 @@
 [versions]
+androidx-collection = "1.6.0"
+androidx-sqlite = "2.6.2"
 chatty = "0.9.6"
 compose = "1.10.3"
 console-clikt = "5.1.0"
@@ -53,7 +55,6 @@ plugin-yml = "0.9.0"
 reflections = "0.10.2"
 serialization = "1.11.0"
 shadowjar = "9.4.1"
-sqlite = "2.6.2"
 sqlite-jdbc = "3.53.1.0"
 sqlite-kt = "0.0.3-alpha.4"
 # @pin
@@ -61,8 +62,9 @@ userdev = "2.0.0-beta.21"
 version-catalog-update = "1.1.0"
 
 [libraries]
-androidx-sqlite = { module = "androidx.sqlite:sqlite", version.ref = "sqlite" }
-androidx-sqlite-bundled = { module = "androidx.sqlite:sqlite-bundled", version.ref = "sqlite" }
+androidx-collection = { module = "androidx.collection:collection", version.ref = "androidx-collection" }
+androidx-sqlite = { module = "androidx.sqlite:sqlite", version.ref = "androidx-sqlite" }
+androidx-sqlite-bundled = { module = "androidx.sqlite:sqlite-bundled", version.ref = "androidx-sqlite" }
 bytebuddy = "net.bytebuddy:byte-buddy:1.18.8"
 chatty = { module = "com.mineinabyss:chatty-paper", version.ref = "chatty" }
 console-clikt = { module = "com.github.ajalt.clikt:clikt", version.ref = "console-clikt" }
@@ -92,15 +94,15 @@ gradle-plugin-yml = { module = "de.eldoria.plugin-yml.paper:de.eldoria.plugin-ym
 gradle-shadowjar = { module = "com.gradleup.shadow:shadow-gradle-plugin", version.ref = "shadowjar" }
 guiy = { module = "com.mineinabyss:guiy-compose", version.ref = "guiy" }
 idofront-commands = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
-idofront-config = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
-idofront-di = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
-idofront-fonts = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
-idofront-logging = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
-idofront-nms = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
-idofront-serializers = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
-idofront-services = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
-idofront-text-components = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
-idofront-util = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
+idofront-config = { module = "com.mineinabyss:idofront-config", version.ref = "idofront" }
+idofront-di = { module = "com.mineinabyss:idofront-di", version.ref = "idofront" }
+idofront-fonts = { module = "com.mineinabyss:idofront-fonts", version.ref = "idofront" }
+idofront-logging = { module = "com.mineinabyss:idofront-logging", version.ref = "idofront" }
+idofront-nms = { module = "com.mineinabyss:idofront-nms", version.ref = "idofront" }
+idofront-serializers = { module = "com.mineinabyss:idofront-serializers", version.ref = "idofront" }
+idofront-services = { module = "com.mineinabyss:idofront-services", version.ref = "idofront" }
+idofront-text-components = { module = "com.mineinabyss:idofront-text-components", version.ref = "idofront" }
+idofront-util = { module = "com.mineinabyss:idofront-util", version.ref = "idofront" }
 jsonschema-kt-annotations = { module = "com.mineinabyss.jsonschema-kt:annotations-jvm", version.ref = "jsonschema-kt" }
 jsonschema-kt-dsl = { module = "com.mineinabyss.jsonschema-kt:dsl", version.ref = "jsonschema-kt" }
 jsonschema-kt-generator-kotlinx-serialization = { module = "com.mineinabyss.jsonschema-kt:generator-kotlinx-serialization", version.ref = "jsonschema-kt" }
@@ -114,6 +116,7 @@ kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest"
 kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
 kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
+kotlinx-benchmark-runtime = { module = "org.jetbrains.kotlinx:kotlinx-benchmark-runtime", version.ref = "kotlinx-benchmark" }
 kotlinx-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
 kotlinx-dataframe = { module = "org.jetbrains.kotlinx:dataframe-core", version.ref = "dataframe" }
