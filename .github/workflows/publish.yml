@@ -21,4 +21,3 @@ jobs:
         with:
           maven-username: ${{ secrets.MAVEN_USERNAME }}
           maven-password: ${{ secrets.MAVEN_PASSWORD }}
-          publish-github-release: 'false'
