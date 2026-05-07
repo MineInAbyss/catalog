@@ -1,11 +1,33 @@
 plugins {
     `version-catalog`
-    alias(libs.plugins.mia.publication)
-    alias(libs.plugins.dependencyversions)
+    `maven-publish`
+    alias(libs.plugins.gradle.versions)
     alias(libs.plugins.version.catalog.update)
 }
 
 val rootDir = isolated.rootProject.projectDirectory
+
+repositories {
+    mavenCentral()
+    google()
+    maven("https://repo.mineinabyss.com/releases") {
+        content {
+            includeGroupAndSubgroups("com.mineinabyss")
+        }
+    }
+    maven("https://repo.mineinabyss.com/snapshots") {
+        content {
+            includeGroupAndSubgroups("com.mineinabyss")
+        }
+    }
+    maven("https://repo.mineinabyss.com/mirror")
+    maven("https://repo.papermc.io/repository/maven-public/") {
+        content {
+            includeGroupAndSubgroups("io.papermc")
+        }
+    }
+    gradlePluginPortal()
+}
 
 catalog {
     versionCatalog {
@@ -13,7 +35,19 @@ catalog {
     }
 }
 
+
 publishing {
+    repositories {
+        maven {
+            name = "mineinabyssMaven"
+            val repo = "https://repo.mineinabyss.com/"
+            val isSnapshot = System.getenv("IS_SNAPSHOT") == "true"
+            val url = if (isSnapshot) repo + "snapshots" else repo + "releases"
+            setUrl(url)
+            credentials(PasswordCredentials::class)
+        }
+    }
+
     publications {
         create<MavenPublication>("maven") {
             from(components["versionCatalog"])
@@ -29,7 +63,7 @@ tasks {
     }
     dependencyUpdates {
         rejectVersionIf {
-            isNonStable(candidate.version)
+            isNonStable(candidate.version) && !isNonStable(currentVersion)
         }
     }
 
@@ -37,6 +71,7 @@ tasks {
 fun isNonStable(version: String): Boolean {
     val unstableKeywords = listOf(
         "-beta",
+        "-dev",
         "-rc",
         "-alpha",
     )

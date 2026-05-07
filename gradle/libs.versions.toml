@@ -1,53 +1,57 @@
 [versions]
-compose = "1.8.2"
+compose = "1.10.3"
 coroutines = "1.10.2"
 # @pin
-creative = "1.11.14"
+creative = "1.13.4"
 customblockdata = "1.2.1"
 dataframe = "0.15.0"
-dependencyversions = "0.52.0"
-dependencies-kt = "0.1.3-dev.2"
-dokka = "2.1.0"
-exposed = "1.0.0"
+dependencies-kt = "0.1.4"
+dokka = "2.2.0"
+exposed = "1.2.0"
 fastutil = "8.5.18"
-fawe = "2.14.3"
+fawe = "2.15.0"
+geary = "0.29.0-dev.1"
+gearyPaper = "0.34.0-dev.4"
+gradle-versions-plugin = "0.54.0"
+guiy = "0.14.5-dev.3"
+idofront = "2.0.0-dev.14"
 java = "21"
 jsonschema-kt = "0.1.1"
-junit = "5.12.0"
+junit = "6.0.3"
 jvm-for-kotlin-multiplatform = "21"
 kaml = "0.104.0"
-koin = "4.1.0"
-kotest = "6.0.7"
-# ENSURE KOTLIN MATCHES THE VERSION IN GRADLE-CONVENTIONS REPO.
+koin = "4.2.1"
+kotest = "6.1.11"
 # @pin
-kotlin = "2.3.20"
-kotlinxIO = "0.8.2"
-shadowjar = "9.4.1"
-userdev = "2.0.0-beta.21"
-plugin-yml = "0.9.0"
-logback = "1.5.23"
+kotlin = "2.3.21"
+kotlinxIO = "0.9.0"
+logback = "1.5.32"
 mccoroutine = "2.22.0"
+mia-conventions = "1.2.3"
 # @pin
 minecraft = "1.21.11-R0.1-SNAPSHOT"
-mockbukkit = "4.108.0"
-mockk = "1.14.7"
+mockbukkit = "4.110.0"
+mockk = "1.14.9"
 modelengine = "R4.1.0"
 morepersistentdatatypes = "2.4.0"
-mythic-dist = "5.11.0"
+mythic-dist = "5.12.0"
 mythiccrucible = "2.4.0-SNAPSHOT"
-nexo = "1.17.0"
+nexo = "1.23"
+plugin-yml = "0.9.0"
 reflections = "0.10.2"
-serialization = "1.10.0-RC"
-sqlite-jdbc = "3.50.2.0"
-sqlite = "2.5.2"
+serialization = "1.11.0"
+shadowjar = "9.4.1"
+sqlite = "2.6.2"
+sqlite-jdbc = "3.53.1.0"
+# @pin
+userdev = "2.0.0-beta.21"
 vault = "1.7"
-version-catalog-update = "1.0.0"
+version-catalog-update = "1.1.0"
 worldguard = "7.1.0-SNAPSHOT"
-geary = "0.29.0-dev.1"
-idofront = "2.0.0-dev.14"
-mia-conventions = "1.2.3"
 
 [libraries]
+androidx-sqlite = { module = "androidx.sqlite:sqlite", version.ref = "sqlite" }
+androidx-sqlite-bundled = { module = "androidx.sqlite:sqlite-bundled", version.ref = "sqlite" }
 creative-api = { module = "team.unnamed:creative-api", version.ref = "creative" }
 creative-serializer-minecraft = { module = "team.unnamed:creative-serializer-minecraft", version.ref = "creative" }
 creative-server = { module = "team.unnamed:creative-server", version.ref = "creative" }
@@ -57,12 +61,34 @@ exposed-dao = { module = "org.jetbrains.exposed:exposed-dao", version.ref = "exp
 exposed-javatime = { module = "org.jetbrains.exposed:exposed-java-time", version.ref = "exposed" }
 exposed-jdbc = { module = "org.jetbrains.exposed:exposed-jdbc", version.ref = "exposed" }
 fastutil = { module = "it.unimi.dsi:fastutil", version.ref = "fastutil" }
+geary-actions = { module = "com.mineinabyss:geary-actions", version.ref = "geary" }
+geary-autoscan = { module = "com.mineinabyss:geary-autoscan", version.ref = "geary" }
+geary-core = { module = "com.mineinabyss:geary-autoscan", version.ref = "geary" }
+geary-papermc = { module = "com.mineinabyss:geary-papermc", version.ref = "gearyPaper" }
+geary-prefabs = { module = "com.mineinabyss:geary-prefabs", version.ref = "geary" }
+geary-serialization = { module = "com.mineinabyss:geary-serialization", version.ref = "geary" }
+geary-uuid = { module = "com.mineinabyss:geary-uuid", version.ref = "geary" }
+gradle-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+gradle-paperweight-userdev = { module = "io.papermc.paperweight:paperweight-userdev", version.ref = "userdev" }
+gradle-plugin-yml = { module = "de.eldoria.plugin-yml.paper:de.eldoria.plugin-yml.paper.gradle.plugin", version.ref = "plugin-yml" }
+gradle-shadowjar = { module = "com.gradleup.shadow:shadow-gradle-plugin", version.ref = "shadowjar" }
+guiy = { module = "com.mineinabyss:guiy-compose", version.ref = "guiy" }
+idofront-commands = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
+idofront-config = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
+idofront-di = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
+idofront-fonts = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
+idofront-logging = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
+idofront-nms = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
+idofront-serializers = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
+idofront-services = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
+idofront-text-components = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
+idofront-util = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
 jsonschema-kt-annotations = { module = "com.mineinabyss.jsonschema-kt:annotations-jvm", version.ref = "jsonschema-kt" }
 jsonschema-kt-dsl = { module = "com.mineinabyss.jsonschema-kt:dsl", version.ref = "jsonschema-kt" }
 jsonschema-kt-generator-kotlinx-serialization = { module = "com.mineinabyss.jsonschema-kt:generator-kotlinx-serialization", version.ref = "jsonschema-kt" }
 junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
-kermit = "co.touchlab:kermit:2.0.5"
+kermit = "co.touchlab:kermit:2.1.0"
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koin-test = { module = "io.insert-koin:koin-test", version.ref = "koin" }
 kotest-assertions = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
@@ -87,7 +113,6 @@ minecraft-mccoroutine-core = { module = "com.github.shynixn.mccoroutine:mccorout
 minecraft-mockbukkit = { module = "org.mockbukkit.mockbukkit:mockbukkit-v1.21", version.ref = "mockbukkit" }
 minecraft-morepersistentdatatypes = { module = "com.jeff-media:MorePersistentDataTypes", version.ref = "morepersistentdatatypes" }
 minecraft-papermc = { module = "io.papermc.paper:paper-api", version.ref = "minecraft" }
-#minecraft-cartridge = { module = "com.mineinabyss.cartridge:cartridge-api", version.ref = "minecraft" }
 minecraft-plugin-fawe-bukkit = { module = "com.fastasyncworldedit:FastAsyncWorldEdit-Bukkit", version.ref = "fawe" }
 minecraft-plugin-fawe-core = { module = "com.fastasyncworldedit:FastAsyncWorldEdit-Core", version.ref = "fawe" }
 minecraft-plugin-modelengine = { module = "com.ticxo.modelengine:ModelEngine", version.ref = "modelengine" }
@@ -98,31 +123,6 @@ minecraft-plugin-worldguard = { module = "com.sk89q.worldguard:worldguard-bukkit
 mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
 reflections = { module = "org.reflections:reflections", version.ref = "reflections" }
 sqlite-jdbc = { module = "org.xerial:sqlite-jdbc", version.ref = "sqlite-jdbc" }
-androidx-sqlite = { module = "androidx.sqlite:sqlite", version.ref = "sqlite" }
-androidx-sqlite-bundled = { module = "androidx.sqlite:sqlite-bundled", version.ref = "sqlite" }
-
-gradle-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
-gradle-paperweight-userdev = { module = "io.papermc.paperweight:paperweight-userdev", version.ref = "userdev" }
-gradle-shadowjar = { module = "com.gradleup.shadow:shadow-gradle-plugin", version.ref = "shadowjar" }
-gradle-plugin-yml = { module = "de.eldoria.plugin-yml.paper:de.eldoria.plugin-yml.paper.gradle.plugin", version.ref = "plugin-yml" }
-
-geary-core = { module = "com.mineinabyss:geary-autoscan", version.ref = "geary" }
-geary-actions = { module = "com.mineinabyss:geary-actions", version.ref = "geary" }
-geary-autoscan = { module = "com.mineinabyss:geary-autoscan", version.ref = "geary" }
-geary-prefabs = { module = "com.mineinabyss:geary-prefabs", version.ref = "geary" }
-geary-serialization = { module = "com.mineinabyss:geary-serialization", version.ref = "geary" }
-geary-uuid = { module = "com.mineinabyss:geary-uuid", version.ref = "geary" }
-
-idofront-commands = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
-idofront-config = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
-idofront-di = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
-idofront-fonts = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
-idofront-logging = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
-idofront-nms = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
-idofront-serializers = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
-idofront-services = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
-idofront-text-components = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
-idofront-util = { module = "com.mineinabyss:idofront-commands", version.ref = "idofront" }
 
 [bundles]
 exposed = [
@@ -132,14 +132,24 @@ exposed = [
     "exposed-jdbc",
     "sqlite-jdbc",
 ]
+idofront-core = [
+    "idofront-commands",
+    "idofront-config",
+    "idofront-di",
+    "idofront-fonts",
+    "idofront-logging",
+    "idofront-serializers",
+    "idofront-text-components",
+    "idofront-util",
+]
 platform = [
     "androidx-sqlite-bundled",
     "creative-api",
     "creative-serializer-minecraft",
     "creative-server",
+    "dependencies",
     "kermit",
     "koin-core",
-    "dependencies",
     "kotlin-reflect",
     "kotlin-stdlib",
     "kotlinx-coroutines",
@@ -156,35 +166,24 @@ platform = [
     "minecraft-morepersistentdatatypes",
     "reflections",
 ]
-idofront-core = [
-    "idofront-commands",
-    "idofront-config",
-    "idofront-di",
-    "idofront-fonts",
-    "idofront-logging",
-    "idofront-serializers",
-    "idofront-text-components",
-    "idofront-util",
-]
+
 [plugins]
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-dependencyversions = { id = "com.github.ben-manes.versions", version.ref = "dependencyversions" }
 dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
+gradle-versions = { id = "com.github.ben-manes.versions", version.ref = "gradle-versions-plugin" }
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
-shadowjar = { id = "com.gradleup.shadow:shadow-gradle-plugin", version.ref = "shadowjar" }
+mia-autoversion = { id = "com.mineinabyss.conventions.autoversion", version.ref = "mia-conventions" }
+mia-copyjar = { id = "com.mineinabyss.conventions.copyjar", version.ref = "mia-conventions" }
+mia-docs = { id = "com.mineinabyss.conventions.docs", version.ref = "mia-conventions" }
+mia-kotlin-jvm = { id = "com.mineinabyss.conventions.kotlin.jvm", version.ref = "mia-conventions" }
+mia-kotlin-multiplatform = { id = "com.mineinabyss.conventions.kotlin.multiplatform", version.ref = "mia-conventions" }
+mia-multiplatform-testing = { id = "com.mineinabyss.conventions.multiplatform.testing", version.ref = "mia-conventions" }
+mia-nms = { id = "com.mineinabyss.conventions.nms", version.ref = "mia-conventions" }
+mia-papermc = { id = "com.mineinabyss.conventions.papermc", version.ref = "mia-conventions" }
+mia-publication = { id = "com.mineinabyss.conventions.publication", version.ref = "mia-conventions" }
+mia-testing = { id = "com.mineinabyss.conventions.testing", version.ref = "mia-conventions" }
+shadowjar = { id = "com.gradleup.shadow", version.ref = "shadowjar" }
 version-catalog-update = { id = "nl.littlerobots.version-catalog-update", version.ref = "version-catalog-update" }
-
-mia-autoversion = {id = "com.mineinabyss.conventions.autoversion", version.ref = "mia-conventions" }
-mia-copyjar = {id = "com.mineinabyss.conventions.copyjar", version.ref = "mia-conventions" }
-mia-docs = {id = "com.mineinabyss.conventions.docs", version.ref = "mia-conventions" }
-mia-kotlin-jvm = {id = "com.mineinabyss.conventions.kotlin.jvm", version.ref = "mia-conventions" }
-mia-kotlin-multiplatform = {id = "com.mineinabyss.conventions.kotlin.multiplatform", version.ref = "mia-conventions" }
-mia-multiplatform-testing = {id = "com.mineinabyss.conventions.multiplatform.testing", version.ref = "mia-conventions" }
-mia-nms = {id = "com.mineinabyss.conventions.nms", version.ref = "mia-conventions" }
-mia-papermc = {id = "com.mineinabyss.conventions.papermc", version.ref = "mia-conventions" }
-mia-publication = {id = "com.mineinabyss.conventions.publication", version.ref = "mia-conventions" }
-mia-testing = {id = "com.mineinabyss.conventions.testing", version.ref = "mia-conventions" }
-
