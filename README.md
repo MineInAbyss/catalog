@@ -1,6 +1,6 @@
-# catalog
-
 <div align="center">
+
+# catalog
 
 [![Maven](https://img.shields.io/maven-metadata/v?metadataUrl=https://repo.mineinabyss.com/releases/com/mineinabyss/catalog/maven-metadata.xml)](https://repo.mineinabyss.com/#/releases/com/mineinabyss/catalog)
 [![Contribute](https://shields.io/badge/Contribute-e57be5?logo=github%20sponsors&style=flat&logoColor=white)](https://mineinabyss.com/contributing)
