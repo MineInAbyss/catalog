@@ -1,15 +1,20 @@
 [versions]
+chatty = "0.9.6"
 compose = "1.10.3"
+console-clikt = "5.1.0"
+console-mordant = "3.0.2"
+console-turtle = "0.10.0"
 coroutines = "1.10.2"
 # @pin
 creative = "1.13.4"
 customblockdata = "1.2.1"
 dataframe = "0.15.0"
+deeperworld = "0.13.2"
 dependencies-kt = "0.1.4"
 dokka = "2.2.0"
 exposed = "1.2.0"
+extracommands = "0.14.0"
 fastutil = "8.5.18"
-fawe = "2.15.0"
 geary = "0.29.0-dev.1"
 gearyPaper = "0.34.0-dev.4"
 gradle-versions-plugin = "0.54.0"
@@ -17,50 +22,62 @@ guiy = "0.14.5-dev.3"
 idofront = "2.0.0-dev.15"
 java = "21"
 jsonschema-kt = "0.1.1"
-junit = "6.0.3"
+junit = "6.1.0-M1"
 jvm-for-kotlin-multiplatform = "21"
 kaml = "0.104.0"
 koin = "4.2.1"
 kotest = "6.1.11"
 # @pin
 kotlin = "2.3.21"
+kotlinx-benchmark = "0.4.16"
 kotlinxIO = "0.9.0"
 logback = "1.5.32"
 mccoroutine = "2.22.0"
-mia-conventions = "1.2.3"
+mia-conventions = "2.0.0"
 # @pin
 minecraft = "1.21.11-R0.1-SNAPSHOT"
+minecraft-plugin-bergerkiller = "2.0.0-SNAPSHOT"
+minecraft-plugin-fawe = "2.15.0"
+minecraft-plugin-modelengine = "R4.1.0"
+minecraft-plugin-mythic-dist = "5.12.0"
+# @pin
+minecraft-plugin-nexo = "1.17.0"
+minecraft-plugin-vault = "1.7.1"
+minecraft-plugin-worldguard = "7.1.0-SNAPSHOT"
 mockbukkit = "4.110.0"
 mockk = "1.14.9"
-modelengine = "R4.1.0"
 morepersistentdatatypes = "2.4.0"
-mythic-dist = "5.12.0"
 mythiccrucible = "2.4.0-SNAPSHOT"
-# @pin
-nexo = "1.17.0"
+packy = "0.9.1"
 plugin-yml = "0.9.0"
 reflections = "0.10.2"
 serialization = "1.11.0"
 shadowjar = "9.4.1"
 sqlite = "2.6.2"
 sqlite-jdbc = "3.53.1.0"
+sqlite-kt = "0.0.3-alpha.4"
 # @pin
 userdev = "2.0.0-beta.21"
-vault = "1.7"
 version-catalog-update = "1.1.0"
-worldguard = "7.1.0-SNAPSHOT"
 
 [libraries]
 androidx-sqlite = { module = "androidx.sqlite:sqlite", version.ref = "sqlite" }
 androidx-sqlite-bundled = { module = "androidx.sqlite:sqlite-bundled", version.ref = "sqlite" }
+bytebuddy = "net.bytebuddy:byte-buddy:1.18.8"
+chatty = { module = "com.mineinabyss:chatty-paper", version.ref = "chatty" }
+console-clikt = { module = "com.github.ajalt.clikt:clikt", version.ref = "console-clikt" }
+console-mordant = { module = "com.github.ajalt.mordant:mordant", version.ref = "console-mordant" }
+console-turtle = { module = "com.lordcodes.turtle:turtle", version.ref = "console-turtle" }
 creative-api = { module = "team.unnamed:creative-api", version.ref = "creative" }
 creative-serializer-minecraft = { module = "team.unnamed:creative-serializer-minecraft", version.ref = "creative" }
 creative-server = { module = "team.unnamed:creative-server", version.ref = "creative" }
+deeperworld = { module = "com.mineinabyss:deeperworld", version.ref = "deeperworld" }
 dependencies = { module = "com.mineinabyss.dependencies:core", version.ref = "dependencies-kt" }
 exposed-core = { module = "org.jetbrains.exposed:exposed-core", version.ref = "exposed" }
 exposed-dao = { module = "org.jetbrains.exposed:exposed-dao", version.ref = "exposed" }
 exposed-javatime = { module = "org.jetbrains.exposed:exposed-java-time", version.ref = "exposed" }
 exposed-jdbc = { module = "org.jetbrains.exposed:exposed-jdbc", version.ref = "exposed" }
+extracommands = { module = "com.mineinabyss:extracommands", version.ref = "extracommands" }
 fastutil = { module = "it.unimi.dsi:fastutil", version.ref = "fastutil" }
 geary-actions = { module = "com.mineinabyss:geary-actions", version.ref = "geary" }
 geary-autoscan = { module = "com.mineinabyss:geary-autoscan", version.ref = "geary" }
@@ -114,16 +131,30 @@ minecraft-mccoroutine-core = { module = "com.github.shynixn.mccoroutine:mccorout
 minecraft-mockbukkit = { module = "org.mockbukkit.mockbukkit:mockbukkit-v1.21", version.ref = "mockbukkit" }
 minecraft-morepersistentdatatypes = { module = "com.jeff-media:MorePersistentDataTypes", version.ref = "morepersistentdatatypes" }
 minecraft-papermc = { module = "io.papermc.paper:paper-api", version.ref = "minecraft" }
-minecraft-plugin-fawe-bukkit = { module = "com.fastasyncworldedit:FastAsyncWorldEdit-Bukkit", version.ref = "fawe" }
-minecraft-plugin-fawe-core = { module = "com.fastasyncworldedit:FastAsyncWorldEdit-Core", version.ref = "fawe" }
-minecraft-plugin-modelengine = { module = "com.ticxo.modelengine:ModelEngine", version.ref = "modelengine" }
-minecraft-plugin-mythic-dist = { module = "io.lumine:Mythic-Dist", version.ref = "mythic-dist" }
-minecraft-plugin-nexo = { module = "com.nexomc:nexo", version.ref = "nexo" }
-minecraft-plugin-vault = { module = "com.github.MilkBowl:VaultAPI", version.ref = "vault" }
-minecraft-plugin-worldguard = { module = "com.sk89q.worldguard:worldguard-bukkit", version.ref = "worldguard" }
+minecraft-plugin-bkcommonlib = { module = "com.bergerkiller.bukkit:BKCommonLib", version.ref = "minecraft-plugin-bergerkiller" }
+minecraft-plugin-blocklocker = "nl.rutgerkok:blocklocker:1.14.1"
+minecraft-plugin-discordsrv = "com.discordsrv:discordsrv:1.30.5"
+minecraft-plugin-fawe-bukkit = { module = "com.fastasyncworldedit:FastAsyncWorldEdit-Bukkit", version.ref = "minecraft-plugin-fawe" }
+minecraft-plugin-fawe-core = { module = "com.fastasyncworldedit:FastAsyncWorldEdit-Core", version.ref = "minecraft-plugin-fawe" }
+minecraft-plugin-hibiscuscommons = "me.lojosho:HibiscusCommons:0.9.1"
+minecraft-plugin-hmccosmetics = "com.hibiscusmc:HMCCosmetics:2.9.1"
+minecraft-plugin-luckperms = "net.luckperms:api:5.5"
+minecraft-plugin-luxdialogs = "org.aselstudios:LuxDialoguesAPI:3.0.5"
+minecraft-plugin-modelengine = { module = "com.ticxo.modelengine:ModelEngine", version.ref = "minecraft-plugin-modelengine" }
+minecraft-plugin-mythic-dist = { module = "io.lumine:Mythic-Dist", version.ref = "minecraft-plugin-mythic-dist" }
+minecraft-plugin-mythichud = "io.lumine.mythichud:api:1.3.1-SNAPSHOT"
+minecraft-plugin-nexo = { module = "com.nexomc:nexo", version.ref = "minecraft-plugin-nexo" }
+minecraft-plugin-placeholderapi = "me.clip:placeholderapi:2.12.2"
+minecraft-plugin-shopkeepers = "com.nisovin.shopkeepers:ShopkeepersAPI:2.26.1"
+minecraft-plugin-tccoasters = { module = "com.bergerkiller.bukkit:TCCoasters", version.ref = "minecraft-plugin-bergerkiller" }
+minecraft-plugin-traincarts = { module = "com.bergerkiller.bukkit:TrainCarts", version.ref = "minecraft-plugin-bergerkiller" }
+minecraft-plugin-vault = { module = "com.github.MilkBowl:VaultAPI", version.ref = "minecraft-plugin-vault" }
+minecraft-plugin-worldguard = { module = "com.sk89q.worldguard:worldguard-bukkit", version.ref = "minecraft-plugin-worldguard" }
 mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+packy = { module = "com.mineinabyss:packy", version.ref = "packy" }
 reflections = { module = "org.reflections:reflections", version.ref = "reflections" }
 sqlite-jdbc = { module = "org.xerial:sqlite-jdbc", version.ref = "sqlite-jdbc" }
+sqlite-kt = { module = "me.dvyy.sqlite:sqlite-kt", version.ref = "sqlite-kt" }
 
 [bundles]
 exposed = [
@@ -171,10 +202,12 @@ platform = [
 [plugins]
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
+graalvm-nativeimage = "org.graalvm.buildtools.native:1.1.0"
 gradle-versions = { id = "com.github.ben-manes.versions", version.ref = "gradle-versions-plugin" }
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlinx-benchmark = { id = "org.jetbrains.kotlinx.benchmark", version.ref = "kotlinx-benchmark" }
 kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 mia-autoversion = { id = "com.mineinabyss.conventions.autoversion", version.ref = "mia-conventions" }
 mia-copyjar = { id = "com.mineinabyss.conventions.copyjar", version.ref = "mia-conventions" }

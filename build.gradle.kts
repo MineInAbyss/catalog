@@ -1,3 +1,6 @@
+import nl.littlerobots.vcu.plugin.resolver.VersionSelectors
+import nl.littlerobots.vcu.plugin.versionSelector
+
 plugins {
     `version-catalog`
     `maven-publish`
@@ -13,11 +16,13 @@ repositories {
     maven("https://repo.mineinabyss.com/releases") {
         content {
             includeGroupAndSubgroups("com.mineinabyss")
+            includeGroupAndSubgroups("me.dvyy")
         }
     }
     maven("https://repo.mineinabyss.com/snapshots") {
         content {
             includeGroupAndSubgroups("com.mineinabyss")
+            includeGroupAndSubgroups("me.dvyy")
         }
     }
     maven("https://repo.mineinabyss.com/mirror")
@@ -61,19 +66,18 @@ tasks {
         languageVersion = JavaLanguageVersion.of(25)
         vendor = JvmVendorSpec.JETBRAINS
     }
-    dependencyUpdates {
-        rejectVersionIf {
-            isNonStable(candidate.version) && !isNonStable(currentVersion)
-        }
+    versionCatalogUpdate {
+        versionSelector { !isNonStable(it.candidate.version) || isNonStable(it.currentVersion) }
     }
-
 }
+
 fun isNonStable(version: String): Boolean {
     val unstableKeywords = listOf(
         "-beta",
         "-dev",
         "-rc",
         "-alpha",
+        "-SNAPSHOT",
     )
 
     return unstableKeywords.any { version.contains(it, ignoreCase = true) }
