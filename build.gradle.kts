@@ -76,6 +76,8 @@ fun isNonStable(version: String): Boolean {
         "-beta",
         "-dev",
         "-rc",
+        "-compat",
+        "-M",
         "-alpha",
         "-SNAPSHOT",
     )

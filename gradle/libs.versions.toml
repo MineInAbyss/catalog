@@ -3,10 +3,10 @@ androidx-collection = "1.6.0"
 androidx-sqlite = "2.6.2"
 chatty = "0.9.6"
 compose = "1.11.0"
+compose-hot-reload = "1.1.1"
 console-clikt = "5.1.0"
 console-mordant = "3.0.2"
 console-turtle = "0.10.0"
-coroutines = "1.11.0"
 # @pin
 creative = "1.13.4"
 customblockdata = "1.2.1"
@@ -23,8 +23,9 @@ gradle-versions-plugin = "0.54.0"
 guiy = "0.14.5-dev.3"
 idofront = "2.0.0-dev.15"
 java = "21"
+jib = "3.5.3"
 jsonschema-kt = "0.1.1"
-junit = "6.1.0-M1"
+junit = "6.0.3"
 jvm-for-kotlin-multiplatform = "21"
 kaml = "0.104.0"
 koin = "4.2.1"
@@ -32,7 +33,10 @@ kotest = "6.1.11"
 # @pin
 kotlin = "2.3.21"
 kotlinx-benchmark = "0.4.17"
-kotlinxIO = "0.9.0"
+kotlinx-coroutines = "1.11.0"
+kotlinx-datetime = "0.8.0"
+kotlinx-io = "0.9.0"
+kotlinx-serialization = "1.11.0"
 logback = "1.5.32"
 mccoroutine = "2.22.0"
 mia-conventions = "2.0.1"
@@ -49,14 +53,12 @@ minecraft-plugin-worldguard = "7.1.0-SNAPSHOT"
 mockbukkit = "4.110.0"
 mockk = "1.14.9"
 morepersistentdatatypes = "2.4.0"
-mythiccrucible = "2.4.0-SNAPSHOT"
 packy = "0.9.1"
 plugin-yml = "0.9.0"
 reflections = "0.10.2"
-serialization = "1.11.0"
 shadowjar = "9.4.1"
 sqlite-jdbc = "3.53.1.0"
-sqlite-kt = "0.1.1"
+sqlite-kt = "0.1.2"
 # @pin
 userdev = "2.0.0-beta.21"
 version-catalog-update = "1.1.0"
@@ -109,7 +111,11 @@ jsonschema-kt-generator-kotlinx-serialization = { module = "com.mineinabyss.json
 junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
 kermit = "co.touchlab:kermit:2.1.0"
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koin" }
+koin-compose-viewmodel = { module = "io.insert-koin:koin-compose-viewmodel", version.ref = "koin" }
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-ktor = { module = "io.insert-koin:koin-ktor", version.ref = "koin" }
 koin-test = { module = "io.insert-koin:koin-test", version.ref = "koin" }
 kotest-assertions = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
 kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest" }
@@ -117,16 +123,20 @@ kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref 
 kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
 kotlinx-benchmark-runtime = { module = "org.jetbrains.kotlinx:kotlinx-benchmark-runtime", version.ref = "kotlinx-benchmark" }
-kotlinx-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
-kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
+kotlinx-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-slf4j = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-slf4j", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-swing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
 kotlinx-dataframe = { module = "org.jetbrains.kotlinx:dataframe-core", version.ref = "dataframe" }
-kotlinx-io = { module = "org.jetbrains.kotlinx:kotlinx-io-core", version.ref = "kotlinxIO" }
-kotlinx-serialization-cbor = { module = "org.jetbrains.kotlinx:kotlinx-serialization-cbor", version.ref = "serialization" }
-kotlinx-serialization-hocon = { module = "org.jetbrains.kotlinx:kotlinx-serialization-hocon", version.ref = "serialization" }
-kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
+kotlinx-io = { module = "org.jetbrains.kotlinx:kotlinx-io-core", version.ref = "kotlinx-io" }
+kotlinx-serialization-cbor = { module = "org.jetbrains.kotlinx:kotlinx-serialization-cbor", version.ref = "kotlinx-serialization" }
+kotlinx-serialization-hocon = { module = "org.jetbrains.kotlinx:kotlinx-serialization-hocon", version.ref = "kotlinx-serialization" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
 kotlinx-serialization-kaml = { module = "com.charleskorn.kaml:kaml", version.ref = "kaml" }
-kotlinx-serialization-properties = { module = "org.jetbrains.kotlinx:kotlinx-serialization-properties", version.ref = "serialization" }
-kotlinx-serialization-protobuf = { module = "org.jetbrains.kotlinx:kotlinx-serialization-protobuf", version.ref = "serialization" }
+kotlinx-serialization-properties = { module = "org.jetbrains.kotlinx:kotlinx-serialization-properties", version.ref = "kotlinx-serialization" }
+kotlinx-serialization-protobuf = { module = "org.jetbrains.kotlinx:kotlinx-serialization-protobuf", version.ref = "kotlinx-serialization" }
 logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
 minecraft-customblockdata = { module = "com.nexomc:custom-block-data", version.ref = "customblockdata" }
 minecraft-mccoroutine = { module = "com.github.shynixn.mccoroutine:mccoroutine-bukkit-api", version.ref = "mccoroutine" }
@@ -204,10 +214,12 @@ platform = [
 
 [plugins]
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+compose-hot-reload = { id = "org.jetbrains.compose.hot-reload", version.ref = "compose-hot-reload" }
 dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
 graalvm-nativeimage = "org.graalvm.buildtools.native:1.1.0"
 gradle-versions = { id = "com.github.ben-manes.versions", version.ref = "gradle-versions-plugin" }
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose" }
+jib = { id = "com.google.cloud.tools.jib", version.ref = "jib" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlinx-benchmark = { id = "org.jetbrains.kotlinx.benchmark", version.ref = "kotlinx-benchmark" }
