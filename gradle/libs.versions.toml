@@ -2,11 +2,11 @@
 androidx-collection = "1.6.0"
 androidx-sqlite = "2.6.2"
 chatty = "0.9.6"
-compose = "1.10.3"
+compose = "1.11.0"
 console-clikt = "5.1.0"
 console-mordant = "3.0.2"
 console-turtle = "0.10.0"
-coroutines = "1.10.2"
+coroutines = "1.11.0"
 # @pin
 creative = "1.13.4"
 customblockdata = "1.2.1"
@@ -14,10 +14,10 @@ dataframe = "0.15.0"
 deeperworld = "0.13.2"
 dependencies-kt = "0.1.4"
 dokka = "2.2.0"
-exposed = "1.2.0"
+exposed = "1.3.0"
 extracommands = "0.14.0"
 fastutil = "8.5.18"
-geary = "0.29.0-dev.1"
+geary = "0.29.0-dev.2"
 gearyPaper = "0.34.0-dev.4"
 gradle-versions-plugin = "0.54.0"
 guiy = "0.14.5-dev.3"
@@ -31,11 +31,11 @@ koin = "4.2.1"
 kotest = "6.1.11"
 # @pin
 kotlin = "2.3.21"
-kotlinx-benchmark = "0.4.16"
+kotlinx-benchmark = "0.4.17"
 kotlinxIO = "0.9.0"
 logback = "1.5.32"
 mccoroutine = "2.22.0"
-mia-conventions = "2.0.0"
+mia-conventions = "2.0.1"
 # @pin
 minecraft = "1.21.11-R0.1-SNAPSHOT"
 minecraft-plugin-bergerkiller = "2.0.0-SNAPSHOT"
@@ -56,7 +56,7 @@ reflections = "0.10.2"
 serialization = "1.11.0"
 shadowjar = "9.4.1"
 sqlite-jdbc = "3.53.1.0"
-sqlite-kt = "0.0.3-alpha.4"
+sqlite-kt = "0.1.1"
 # @pin
 userdev = "2.0.0-beta.21"
 version-catalog-update = "1.1.0"
@@ -223,4 +223,5 @@ mia-papermc = { id = "com.mineinabyss.conventions.papermc", version.ref = "mia-c
 mia-publication = { id = "com.mineinabyss.conventions.publication", version.ref = "mia-conventions" }
 mia-testing = { id = "com.mineinabyss.conventions.testing", version.ref = "mia-conventions" }
 shadowjar = { id = "com.gradleup.shadow", version.ref = "shadowjar" }
+sqlite-kt-codegen = { id = "me.dvyy.sqlite.codegen", version.ref = "sqlite-kt" }
 version-catalog-update = { id = "nl.littlerobots.version-catalog-update", version.ref = "version-catalog-update" }
