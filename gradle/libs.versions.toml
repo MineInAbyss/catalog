@@ -46,7 +46,7 @@ minecraft-plugin-fawe = "2.15.2"
 minecraft-plugin-modelengine = "R4.1.1"
 minecraft-plugin-mythic-dist = "5.13.1-SNAPSHOT"
 # @pin
-minecraft-plugin-nexo = "1.29.0-dev.13"
+minecraft-plugin-nexo = "1.29.0-dev.14"
 minecraft-plugin-vault = "1.7.1"
 minecraft-plugin-worldguard = "7.1.0-SNAPSHOT"
 # @pin
@@ -190,6 +190,7 @@ idofront-core = [
     "idofront-util",
 ]
 platform = [
+    "androidx-collection",
     "androidx-sqlite-bundled",
     "creative-api",
     "creative-serializer-minecraft",
