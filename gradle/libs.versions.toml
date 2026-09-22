@@ -8,7 +8,7 @@ console-clikt = "5.1.0"
 console-mordant = "3.0.2"
 console-turtle = "0.10.0"
 # @pin
-creative = "1.15.2"
+creative = "1.15.3"
 customblockdata = "1.2.4"
 dataframe = "0.15.0"
 deeperworld = "0.14.0-dev.3"
