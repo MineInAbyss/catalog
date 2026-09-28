@@ -84,10 +84,11 @@ exposed-javatime = { module = "org.jetbrains.exposed:exposed-java-time", version
 exposed-jdbc = { module = "org.jetbrains.exposed:exposed-jdbc", version.ref = "exposed" }
 extracommands = { module = "com.mineinabyss:extracommands", version.ref = "extracommands" }
 fastutil = { module = "it.unimi.dsi:fastutil", version.ref = "fastutil" }
+geary-papermc = { module = "com.mineinabyss:geary-papermc", version.ref = "gearyPaper" }
+geary-nexo = { module = "com.mineinabyss:geary-papermc-nexo", version.ref = "gearyPaper" }
 geary-actions = { module = "com.mineinabyss:geary-actions", version.ref = "geary" }
 geary-autoscan = { module = "com.mineinabyss:geary-autoscan", version.ref = "geary" }
 geary-core = { module = "com.mineinabyss:geary-autoscan", version.ref = "geary" }
-geary-papermc = { module = "com.mineinabyss:geary-papermc", version.ref = "gearyPaper" }
 geary-prefabs = { module = "com.mineinabyss:geary-prefabs", version.ref = "geary" }
 geary-serialization = { module = "com.mineinabyss:geary-serialization", version.ref = "geary" }
 geary-uuid = { module = "com.mineinabyss:geary-uuid", version.ref = "geary" }
