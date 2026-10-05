@@ -55,6 +55,7 @@ mockbukkit = "4.110.0"
 mockk = "1.14.11"
 morepersistentdatatypes = "2.4.0"
 packy = "0.9.2-dev.5"
+emojy = "0.10.27-dev.1"
 plugin-yml = "0.9.0"
 reflections = "0.10.2"
 shadowjar = "9.4.2"
@@ -168,6 +169,7 @@ minecraft-plugin-vault = { module = "com.github.MilkBowl:VaultAPI", version.ref 
 minecraft-plugin-worldguard = { module = "com.sk89q.worldguard:worldguard-bukkit", version.ref = "minecraft-plugin-worldguard" }
 mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
 packy = { module = "com.mineinabyss:packy", version.ref = "packy" }
+emojy = { module = "com.mineinabyss:emojy", version.ref = "emojy" }
 reflections = { module = "org.reflections:reflections", version.ref = "reflections" }
 sqlite-jdbc = { module = "org.xerial:sqlite-jdbc", version.ref = "sqlite-jdbc" }
 sqlite-kt = { module = "me.dvyy.sqlite:sqlite-kt", version.ref = "sqlite-kt" }
