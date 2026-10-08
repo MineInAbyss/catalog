@@ -46,7 +46,7 @@ minecraft-plugin-fawe = "2.15.2"
 minecraft-plugin-modelengine = "R4.1.1"
 minecraft-plugin-mythic-dist = "5.13.1-SNAPSHOT"
 # @pin
-minecraft-plugin-nexo = "1.30.0-dev.1"
+minecraft-plugin-nexo = "1.30.0-dev.0"
 minecraft-plugin-vault = "1.7.1"
 minecraft-plugin-worldguard = "7.1.0-SNAPSHOT"
 # @pin
